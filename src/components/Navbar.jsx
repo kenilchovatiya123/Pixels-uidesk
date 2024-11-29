@@ -14,7 +14,7 @@ function Navbar() {
             <nav className='bg-blue-950 w-full h-16 flex justify-between items-center px-4 md:px-20 fixed top-0 right-0'>
                 {/* navbar logo start */}
                 <div>
-                    <h1 className='text-3xl md:text-4xl text-white font-bold cursor-pointer tracking-tighter'><FontAwesomeIcon icon={faXing} className='text-white'/>PIXELS</h1>
+                    <h1 className='text-3xl md:text-4xl text-white font-bold cursor-pointer tracking-tighter'><FontAwesomeIcon icon={faXing} className='text-white' />PIXELS</h1>
                 </div>
                 {/* navbar logo end */}
                 {/* navbar menu start */}
@@ -79,11 +79,51 @@ function Navbar() {
                 </i>
                 <div className={`absolute md:hidden top-16 left-0 w-full py-4 gap-6 text-gray-400 bg-white flex flex-col items-center font-medium text-lg shadow-sm transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
                     style={{ transition: "transform 0.2s ease, opacity 0.6s ease-in-out" }}>
-                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'><a href="#home">Home</a></li>
-                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'><a href="#about">About</a></li>
-                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'><a href="#pricing">Pricing</a></li>
-                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'><a href="#contact">Contact</a></li>
-                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'><a href="#users">Support</a></li>
+                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'>
+                        <Link to="hero"
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={500} >
+                            Home
+                        </Link>
+                    </li>
+                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'>
+                        <Link to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={500} >
+                            About
+                        </Link>
+                    </li>
+                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'>
+                        <Link to="users"
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={500} >
+                            Support
+                        </Link>
+                    </li>
+                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'>
+                        <Link to="pricing"
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={500} >
+                            Pricing
+                        </Link>
+                    </li>
+                    <li className='list-none w-full text-center p-3 hover:text-gray-800 transition-all cursor-pointer'>
+                        <Link to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={80}
+                            duration={500} >
+                            Contact
+                        </Link>
+                    </li>
                 </div>
             </nav>
 
